@@ -5,15 +5,16 @@ import './App.css'
 import { FaFacebook } from 'react-icons/fa'
 import { FaBeer } from 'react-icons/fa'
 import Nav from './components/Nav'
-
+import Aside from './components/Aside'
+import Footer from './components/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
+    <Footer/>
       <Nav />
-      jhjhdhvjkhdfjkhbdfjkbhkl
+      <Aside/>
     </>
   )
 }

@@ -1,0 +1,167 @@
+.wallet-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.wallet-header {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.wallet-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.wallet-balance {
+  margin-top: 1rem;
+}
+
+.balance-label {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.balance-amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.wallet-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.action-button {
+  flex: 1;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-button.deposit {
+  background-color: #10b981;
+  color: white;
+}
+
+.action-button.withdraw {
+  background-color: #ef4444;
+  color: white;
+}
+
+.action-button.transfer {
+  background-color: #6366f1;
+  color: white;
+}
+
+.action-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-history {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-history h2 {
+  margin: 0 0 1.5rem 0;
+  color: #1f2937;
+  font-size: 1.5rem;
+}
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.transaction-item:hover {
+  background-color: #f3f4f6;
+}
+
+.transaction-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.transaction-type {
+  font-weight: 500;
+  color: #1f2937;
+  text-transform: capitalize;
+}
+
+.transaction-description {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.transaction-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.transaction-amount {
+  font-weight: 600;
+}
+
+.transaction-amount.positive {
+  color: #10b981;
+}
+
+.transaction-amount.negative {
+  color: #ef4444;
+}
+
+.transaction-date {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .wallet-container {
+    padding: 1rem;
+  }
+
+  .wallet-actions {
+    flex-direction: column;
+  }
+
+  .transaction-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .transaction-details {
+    align-items: flex-start;
+  }
+} 

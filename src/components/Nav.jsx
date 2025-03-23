@@ -15,7 +15,7 @@ const Nav = () => {
     <header className="header">
       <nav className="navbar">
         <div className="nav-logo">
-          <h1>Bliss</h1>
+          <h1 className='bli'>Bliss</h1>
         </div>
 
         {/* Desktop Navigation */}
