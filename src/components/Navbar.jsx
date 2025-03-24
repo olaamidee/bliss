@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { FaHome, FaUser, FaEnvelope, FaTimes } from 'react-icons/fa'
+import { FaHome, FaUser, FaEnvelope, FaTimes, FaSignInAlt } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,25 +11,29 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-red-800 hover:text-red-600 transition-colors duration-300">
+            <Link to="/" className="text-2xl font-bold text-red-800 hover:text-red-600 transition-colors duration-300">
               Bliss
-            </h1>
+            </Link>
           </div>
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="flex items-center text-gray-700 hover:text-red-800 transition-colors duration-300">
+            <Link to="/" className="flex items-center text-gray-700 hover:text-red-800 transition-colors duration-300">
               <FaHome className="mr-2" />
               Home
-            </a>
-            <a href="#" className="flex items-center text-gray-700 hover:text-red-800 transition-colors duration-300">
+            </Link>
+            <Link to="/about" className="flex items-center text-gray-700 hover:text-red-800 transition-colors duration-300">
               <FaUser className="mr-2" />
               About
-            </a>
-            <a href="#" className="flex items-center text-gray-700 hover:text-red-800 transition-colors duration-300">
+            </Link>
+            <Link to="/contact" className="flex items-center text-gray-700 hover:text-red-800 transition-colors duration-300">
               <FaEnvelope className="mr-2" />
               Contact
-            </a>
+            </Link>
+            <Link to="/login" className="flex items-center text-gray-700 hover:text-red-800 transition-colors duration-300">
+              <FaSignInAlt className="mr-2" />
+              Login
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -51,18 +56,22 @@ const Navbar = () => {
         {/* Mobile Navigation Menu */}
         <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
           <div className="px-2 pt-2 pb-3 space-y-1 bg-white">
-            <a href="#" className="flex items-center text-gray-700 hover:text-red-800 transition-colors duration-300 px-3 py-2 rounded-md">
+            <Link to="/" className="flex items-center text-gray-700 hover:text-red-800 transition-colors duration-300 px-3 py-2 rounded-md">
               <FaHome className="mr-2" />
               Home
-            </a>
-            <a href="#" className="flex items-center text-gray-700 hover:text-red-800 transition-colors duration-300 px-3 py-2 rounded-md">
+            </Link>
+            <Link to="/about" className="flex items-center text-gray-700 hover:text-red-800 transition-colors duration-300 px-3 py-2 rounded-md">
               <FaUser className="mr-2" />
               About
-            </a>
-            <a href="#" className="flex items-center text-gray-700 hover:text-red-800 transition-colors duration-300 px-3 py-2 rounded-md">
+            </Link>
+            <Link to="/contact" className="flex items-center text-gray-700 hover:text-red-800 transition-colors duration-300 px-3 py-2 rounded-md">
               <FaEnvelope className="mr-2" />
               Contact
-            </a>
+            </Link>
+            <Link to="/login" className="flex items-center text-gray-700 hover:text-red-800 transition-colors duration-300 px-3 py-2 rounded-md">
+              <FaSignInAlt className="mr-2" />
+              Login
+            </Link>
           </div>
         </div>
       </div>
